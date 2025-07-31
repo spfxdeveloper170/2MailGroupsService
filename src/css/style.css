@@ -1,0 +1,821 @@
+#workbenchPageContent,
+.CanvasComponent.LCS .ControlZone--control .CanvasZone .CanvasZone-SectionContainer .CanvasSection .CanvasControl {
+  width: 100vw !important; 
+  max-width: 100% !important;
+  min-width: 90vw !important; 
+  background-color: white;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  justify-content: center !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.c-red {
+  color: #f11111;
+}
+.data-forms.wrapper {
+  background-color: white !important;
+}
+.testelement {
+  height: 1250px;
+ }
+.maincontainer {
+  display: block;
+  /*width: 80vw;*/
+  width: auto;
+  margin: 0px;
+  top: 48%;
+  /*transform: translate(-50%, -50%);*/
+  left: 50%;
+  /*position: absolute;*/
+  position: static;
+  z-index: 10;
+  height: auto;
+}
+.top48 {
+  top: 48% !important;
+}
+.gapcontain {
+  margin-top: 10px !important;
+}
+
+ 
+
+
+.attachment-container-empty{
+  border: 2px dashed #ff3030;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex !important;
+  height: 157px;
+}
+
+.textContainer {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  color: #333;
+  gap: 12px;
+  padding-left: 15px;
+}
+button.ms-Button.ms-Button--primary.submit-formbtn.root-143 {
+  border-radius: 40px;
+}
+
+button.ms-Button.ms-Button--default.cancel-formbtn.root-147 {
+  border-radius: 40px;
+}
+
+
+
+/* Prevent maroon border */
+.fieldGroup {
+  border: 1px solid grey !important; /* Default */
+  box-shadow: none !important;
+}
+
+/* Error case */
+.error-field .ms-TextField-fieldGroup {
+  border: 1px solid red !important;
+  box-shadow: none !important;
+}
+
+/* Focus case */
+.ms-TextField-fieldGroup:focus-within {
+  border: 1px solid red !important;
+  box-shadow: none !important;
+}
+
+/* Remove maroon focus ring */
+.ms-TextField-fieldGroup:focus-within {
+  box-shadow: none !important;
+}
+
+
+.ms-TextField-field[readonly] {
+  background-color: rgba(237, 237, 237, 0.75) !important;
+}
+
+
+
+.form-text label {
+  color: #555;
+  display: block !important;
+  font-size: 15px;
+  font-weight: 500 !important;
+  margin-top: 26px !important;
+}
+
+.form-text-oneline{
+  display: "flex";
+  align-items: "center" 
+}
+
+.form-text span {
+  /*display: block !important;*/
+  /* display: none !important;
+  font-weight: 500 !important;
+  color: gray !important;
+  font-size: 15px; */
+}
+
+
+.text-area span {
+  /*display: block !important;*/
+  display: none !important;
+  font-weight: 500 !important;
+  color: gray !important;
+  font-size: 15px;
+}
+
+
+
+.SpanText {
+  margin-top: 12% !important;
+  /*display: block !important;*/
+  display: none !important;
+  font-weight: 600 !important;
+  color: gray !important;
+  font-size: 15px;
+}
+.error-field {
+
+  border-radius: 2px;
+}
+
+
+.dropdownfield.error-field .ms-Dropdown-title {
+  border-color: red !important;
+}
+
+.text-area.error-field textarea {
+  border-color: red !important;
+}
+
+.form-text.error-field input {
+  border-color: red !important;
+}
+.ms-TextField-field.error-field input{
+  border-color: red !important;
+}
+
+
+.ms-TextField-field {
+  box-shadow: none;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  background: #fff;
+  cursor: text;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  position: relative;
+  min-height: 60px;
+}
+
+
+
+
+
+
+.form-text input {
+  width: 100% !important;
+  border-radius: 6px !important;
+  border: 1px solid #ccc !important;
+  outline: none !important;
+  font-size: 15px !important;
+  color: #555/* hsl(0, 0%, 20%) */!important;
+  height: 60px !important;
+  background-color: transparent !important;
+  margin-bottom: 20px !important;
+  padding: 10px;
+}
+
+
+
+.text-area input {
+  width: 100% !important;
+  border-radius: 6px !important;
+  border: 1px solid #ccc !important;
+  outline: none !important;
+  font-size: 15px !important;
+  color: #555/* hsl(0, 0%, 20%) */!important;
+  height: 55px !important;
+  background-color: transparent !important;
+  margin-bottom: 20px !important;
+}
+
+.form-text div:nth-child(2) {
+  background-color: transparent !important;
+  border-color: transparent !important;
+  height: 62px !important;
+  border-radius: 5px;
+ 
+}
+
+
+.ms-Dropdown-container {
+  position: relative;
+  z-index: 1000;
+}
+
+.ms-Dropdown-menu {
+  position: absolute;
+  z-index: 1100;
+}
+
+
+
+
+.textContainer input[disabled] {
+  background-color: rgba(150, 150, 150, 0.1) !important;
+}
+.header-top {
+  width: 100%;
+  background-color: #f0f0f0;
+  border: 1px solid #D4D3D3;
+  border-bottom: 0px;
+  display: flex;
+  align-items: center;
+  border-radius: 15px 15px 0px 0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-heading {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #222222;
+}
+/*
+.top-container {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  color: #333;
+}*/
+
+.person-image {
+  margin: 25px;
+  margin-left: 30px;
+  width: 70px;
+  height: 70px;
+  background-color: #fdd835;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+}
+.person-description {
+  font-size: 14px;
+  color: #888888;
+}
+
+.person-name{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.submit-formbtn {
+  border-radius: 40px;
+  color:white;
+  background-color: #920a38;
+  height: 60px;
+  text-align: center;
+  justify-content: center; 
+  margin-top: 25px;
+  border-color: transparent;
+  padding: 15px 30px;
+  width: 164px !important;
+  transition: background-color 0.3s;
+}
+
+.cancel-formbtn {
+  border-radius: 40px;
+  color:#920a38;
+  height: 60px;
+  background-color: white;
+  text-align: center;
+  justify-content: center; 
+  margin-top: 25px;
+  border-color: #920a38;
+  padding: 15px 30px;
+  width: 164px !important;
+  transition: background-color 0.3s;
+}
+
+
+.dropdownfield span {
+    align-items: center;
+    background-color: transparent !important;
+    border-color: #ccc;
+    border-radius: 6px !important;
+    color: #555 !important;
+    display: flex;
+    font-size: 15px !important;
+    height: 59px !important;
+    margin-top: 4px !important;
+    width: 100% !important;
+    z-index: 1049;
+    position: absolute;
+    right: auto;
+    
+ 
+}
+
+.dropdownfield label {
+  display: block !important;
+  font-weight: 500 !important;
+  color: #555 !important;
+  font-size: 15px;
+  margin-top: 24px !important;
+}
+.dropdownfield i {
+  color: black !important;
+  display: flex;
+  justify-content: end;
+  width: 99%;
+}
+
+.arabicspan {
+  color: red;
+  font-size: 10px;
+}
+.maincontainerar {
+  display: block;
+  width: 80vw;
+  margin: 0px;
+  top: 55%;
+  transform: translate(-50%, -60%) !important;
+  left: 50%;
+  position: absolute;
+  z-index: 10;
+  height: auto;
+}
+
+
+@media screen and (max-width: 510px) {
+
+
+  .canvasar{
+    height: 2300px
+  }
+  .canvas{
+height: 2580px;
+  }
+  .maincontainer {
+    display: block;
+    width: 82vw;
+    margin: 0px;
+    top: 35% !important;
+    transform: translate(-50%, -45%) !important;
+    left: 50%;
+    position: absolute;
+    z-index: 10;
+    height: auto;
+}
+
+.maincontainerar {
+  display: block;
+  width: 82vw;
+  margin: 0px;
+  top: 35% !important;
+  transform: translate(-50%, -51%) !important;
+  left: 50%;
+  position: absolute;
+  z-index: 10;
+  height: auto;
+}
+.fieldContainer {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr) !important;
+  column-gap: 20px;
+}
+.testelement {
+  height: 1700px;
+ }
+
+
+ .SpanText {
+  font-weight: 600 !important;
+  margin-top: 20% !important;
+}
+
+}
+.attachmentclass input#file-upload-button{ /*for the upload area*/
+  height: 157px;
+  width: 100%;
+  border: 1px dotted #ccc;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.attachmentclass label {
+  display: block !important;
+  font-weight: 500 !important;
+  color: #555 !important;
+  font-size: 12px;
+  margin-top: 24px !important;
+}
+
+.ms-TextField.required .ms-TextField-field,
+.ms-TextField.required .ms-TextField-field:focus {
+  border: solid 1px red !important;
+}
+.ms-Dropdown-container.required .ms-Dropdown {
+  border: solid 1px red !important;
+}
+.updatemodal {
+  text-align: center;
+}
+.updatemodal p {
+  display: inline-block;
+}
+.updatemodal .buttonsbox {
+  display: inline-block;
+}
+.updatemodal.modal-body .ms-Label {
+  width: 28% !important;
+  text-align: left;
+}
+.updatemodal.modal-body .ms-TextField {
+  width: 70%;
+}
+.updatemodal.modal-body select {
+  width: 70%;
+}
+.updatemodal.modal-body .ms-TextField-fieldGroup {
+  width: 100% !important;
+}
+.updatemodal {
+  text-align: center;
+}
+.updatemodal p {
+  display: inline-block;
+}
+.updatemodal .buttonsbox {
+  display: inline-block;
+}
+.modal-title {
+  font-size: 16px;
+  color: #fff;
+}
+.modal-header {
+  background: darkred;
+  padding: 12px 18px;
+}
+.modal-dialog.modal-lg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.fade.modal.show {
+  top: 0 !important;
+  left: auto !important;
+  opacity: 1;
+  z-index: 99999999;
+  background: rgb(0 0 0 / 32%);
+  right: 0 !important;
+}
+/* Attachments*/
+.attachment-container {
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex !important;
+  height: 157px;
+}
+
+.attachment-placeholder {
+  color: #333; 
+  font-size: 16px; 
+  position: relative; 
+  display: flex !important; 
+  align-items: center; 
+  flex-direction: column !important;
+  z-index: 1;
+}
+
+.attachment-icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Apply gray color to placeholder item */
+.placeholder-gray .ms-Dropdown-title {
+  color: gray !important;
+}
+
+
+.attachment-placeholder input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  cursor: pointer; 
+}
+
+.colorRed {
+  color: darkred !important
+}
+.colorRed-imp {
+  color: darkred !important
+}
+.colorRed-dropdown {
+  color: darkred !important;
+  margin-top: 24px;
+  margin-left: 2px;
+}
+.attachment-container span{
+  display: block !important;
+  font-weight: 500 !important;
+  color: #555 !important;
+  font-size: 8px;
+}
+.ms-TextField label.ms-Label {
+  color: #555 !important; /* Sets label color */
+
+}
+
+
+.form-drop-text label {
+  display: block !important;
+  font-weight: 500 !important;
+  color: #555;
+  font-size: 12px;
+  margin-top: 24px !important;
+  margin-right: 4px;
+}
+
+.uploadeditems {
+  display: flex;
+  align-items: center;
+}
+
+.progresscontainer {
+  width: 60%;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  height: 10px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin: 20px 0px;
+  margin-left: 10px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.progressbar {
+  height: 100%;
+  width: 100%; 
+  background-color: #4caf50;
+  border-radius: 10px 0 0 10px;
+  transition: width 0.5s ease;
+}
+
+.cancelbtn {
+  margin-left: 10px;
+  color: red;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fieldContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+  justify-content: center;
+  
+}
+
+@media screen and (max-width: 667px) {
+  .SpanText {
+    margin-top: 25% !important;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .SpanText {
+    margin-top: 30% !important;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .span {
+      font-size: 15px;
+      margin-top: 20% !important;
+  }
+}
+.form-text .ms-TextField-fieldGroup::after {
+  border: none !important;
+}
+
+.dropdownfield .ms-Dropdown:focus::after {
+  border: none !important;
+}
+/* On hover */
+.ms-TextField:hover .ms-TextField-fieldGroup {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* On focus */
+.ms-TextField:focus-within .ms-TextField-fieldGroup {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Textarea (actual input field) styling */
+/*textarea.ms-TextField-field {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}*/
+
+/* Prevent pseudo-element borders */
+.ms-TextField-fieldGroup::after {
+  border: none !important;
+  content: none !important;
+  box-shadow: none !important;
+}
+
+/* right side dropdown */
+
+/* Dropdown Container - Parent element */
+.ms-Dropdown-container {
+  position: relative;
+}
+
+/* Dropdown Title (the visible part) */
+.ms-Dropdown-title {
+  border: 1px solid #ccc !important;
+  border-radius: 6px !important;
+  height: 59px !important;
+  display: flex !important;
+  align-items: center !important;
+  padding: 0 12px !important;
+}
+
+/* Dropdown Panel (the options list) */
+.ms-Dropdown-panel {
+  position: absolute !important;
+  width: 100% !important;
+  z-index: 1100 !important; /* Higher than other elements */
+  top: 100% !important; /* Positions it right below the input */
+  left: 0 !important;
+}
+
+/* Dropdown Items container */
+.ms-Dropdown-items {
+  border: 1px solid #ccc !important;
+  border-radius: 6px !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+  max-height: 300px !important;
+  overflow-y: auto !important;
+}
+
+/* Individual dropdown items */
+.ms-Dropdown-item {
+  padding: 8px 12px !important;
+}
+
+/* Hover state for items */
+.ms-Dropdown-item:hover {
+  background-color:rgb(234, 234, 234) !important;
+}
+
+/* Remove any conflicting transforms or overflow */
+.ms-Dropdown * {
+  transform: none !important;
+  overflow: visible !important;
+}
+
+
+/* Submit button hover */
+.buttonContainer .submit-formbtn:hover {
+  background-color: rgb(126, 21, 49) !important;
+  border: 1px solid rgb(126, 21, 49) !important;
+  color: rgb(246, 246, 246) !important;
+}
+
+/* Cancel button hover */
+.buttonContainer .cancel-formbtn:hover {
+  background-color: white !important;
+  border: 1px solid rgb(126, 21, 49) !important;
+  color: rgb(126, 21, 49) !important;
+}
+
+/***************People picker************************/
+.people-picker-wrapper.error-border .ms-PeoplePicker {
+  border: 1px solid red;
+  border-radius: 6px !important;
+}
+.people-picker-wrapper.error-border i {
+    display:none !important;
+}
+.people-picker-wrapper.error-border span {
+     color: #555 !important;
+      font-size: 12px;
+    font-weight: 500 !important;
+}
+.people-picker-wrapper {
+    margin-top: 32px;
+}
+ 
+.ms-BasePicker-text{
+     border-radius:6px;    
+      border: 1px solid #ccc!important;
+       height: 60px!important;
+}
+.people-picker-wrapper input{
+    height: 60px!important;
+    border-radius:15px;    
+    background-color: transparent!important;
+    /* border: 1px solid #ccc!important;
+    border-radius: 6px!important; */
+    color: #555!important;
+    font-size: 15px!important;
+}
+/******************End*************************/
+.description_div{
+  
+  margin-bottom: 15px;
+}
+.exteno{
+  margin-top: -4px;
+}
+
+.ms-DatePicker .ms-TextField-field {
+   border-radius:6px !important;
+  padding-left:5px;
+}
+.has-error div:nth-child(2) {
+  border: 1px solid red !important;
+}
+i.ms-DatePicker-event--with-label.msDatePickerDisabled {
+   margin-top:15px;
+}
+
+.ms-DatePicker span {
+   margin-top:15px;
+}
+
+.file-error-border{
+  border: 2px dashed red !important;
+}
+.fileerror-border span {
+     color: #555 !important;
+      font-size: 12px;
+    font-weight: 500 !important;
+}
+.fileerror{
+   color: #555;
+      font-size: 12px;
+    font-weight: 500;
+}

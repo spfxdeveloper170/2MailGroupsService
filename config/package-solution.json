@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "Mail Group Service",
+    "id": "fe87cca9-c481-4b09-9c4e-cd6e6d6341e3",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "Mail Group Service description"
+      },
+      "longDescription": {
+        "default": "Mail Group Service description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "Mail Group Service Feature",
+        "description": "The feature that activates elements of the Mail Group Service solution.",
+        "id": "7617d971-5919-427b-9eeb-e08f70935686",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/mail-group-service.sppkg"
+  }
+}

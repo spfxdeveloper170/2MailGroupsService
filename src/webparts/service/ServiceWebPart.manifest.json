@@ -1,0 +1,28 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "e7e4a07c-80da-47fd-8d66-6a3f7993b625",
+  "alias": "ServiceWebPart",
+  "componentType": "WebPart",
+ 
+  "version": "*",
+  "manifestVersion": 2,
+ 
+  "requiresCustomScript": false,
+  "supportedHosts": ["SharePointWebPart", "TeamsPersonalApp", "TeamsTab", "SharePointFullPage"],
+  "supportsThemeVariants": true,
+
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70",  
+    "group": { "default": "Advanced" },
+    "title": { "default": "Mail Group Service" },
+    "description": { "default": "Mail Group Service description" },
+    "officeFabricIconFontName": "Mail",
+    "properties": {
+      "description": "Mail Group Service",
+       "Apilink":"https://mcitstgapim.mcit.gov.qa/ivantitest/new",
+      "subscriptionId":"C278ABDF504E4CBB9678DFAA61B5FCE1",
+      "OcpApimKey":"ba47658772b3473cbd9eb045e856e9fc",
+      "Subject":"Mail Group Service Testing"
+    }
+  }]
+}
