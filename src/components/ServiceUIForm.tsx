@@ -31,6 +31,8 @@ export interface IRequestUIFormProps {
   EmpId: string;
   onErrorRequiredFields: () => void;
   onSave: (formData: IServiceRequestFormData) => Promise<void>;
+  OcpApimKey: string;
+  UserRecIdApilink: string;
 }
 const isAr =
   window.location.pathname.includes("/ar/") ||
@@ -68,6 +70,12 @@ const ServiceUIForm: React.FC<IRequestUIFormProps> = (props) => {
     Member4_Title: "",
     Member5_Title: "",
     Member6_Title: "",
+    Member1_key: "",
+    Member2_key: "",
+    Member3_key: "",
+    Member4_key: "",
+    Member5_key: "",
+    Member6_key: "",
   });
   const [uploadedFiles, setUploadedFiles] = useState<Array<{ name: string }>>(
     []
@@ -185,21 +193,63 @@ const ServiceUIForm: React.FC<IRequestUIFormProps> = (props) => {
   const _getPeoplePickerItems = async (
     selectedUserProfiles: any[],
     internalName: string,
-    internalName_text: string
+    internalName_text: string,
+    internalName_key: string
   ) => {
     if (selectedUserProfiles.length > 0) {
       const emails = selectedUserProfiles[0].id.split("|")[2];
       const title = selectedUserProfiles[0].text;
       handleInputChange(internalName, emails);
       handleInputChange(internalName_text, title);
+      _getUserRecId(emails, internalName_key);
       console.log("Selected userids:", emails);
       console.log("Selected Items:", selectedUserProfiles);
     } else {
       handleInputChange(internalName, "");
       handleInputChange(internalName_text, "");
+      handleInputChange(internalName_key, "");
     }
   };
+  const _getUserRecId = async (email, columnkey) => {
+    try {
+      console.log("_getUserRecId function is called");
+      const response = await fetch(props.UserRecIdApilink, {
+        method: "GET",
+        headers: {
+          "Ocp-Apim-Subscription-Key": props.OcpApimKey,
+          Email: email,
+        },
+      });
+      if (response.ok) {
+        const rawResponse = await response.text();
+        const jsonStart = rawResponse.indexOf("{");
+        if (jsonStart === -1) {
+          throw new Error("JSON not found in response");
+        }
 
+        // Step 2: Extract only the JSON string
+        const jsonString = rawResponse.slice(jsonStart);
+
+        // Step 3: Parse the JSON
+        let parsedData;
+        try {
+          parsedData = JSON.parse(jsonString);
+          console.log("requestRecId Hardware Request:", parsedData);
+        } catch (e) {
+          throw new Error("Failed to parse JSON: " + e.message);
+        }
+        let UserEmail = parsedData.value[0].PrimaryEmail;
+        let RecId = parsedData.value[0].RecId;
+        handleInputChange(columnkey, RecId);
+      }
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`Request failed: ${response.status} - ${errorText}`);
+      }
+    } catch (error: any) {
+      console.error("Error getting UserRecId:", error);
+    }
+  };
   let requesterFileList: FileList | null = null;
   const removeAttachment = (fileName: string) => {
     // Filter out the file to remove
@@ -302,18 +352,23 @@ const ServiceUIForm: React.FC<IRequestUIFormProps> = (props) => {
   const forceUpdate = () => setForceUpdater((prev) => prev + 1);
   const _getPeoplePickerMemberItems = async (
     selectedUserProfiles: any[],
-    Member: string,
-    Member_Text: string
+    internalName: string,
+    internalName_text: string,
+    internalName_key: string
   ) => {
     if (selectedUserProfiles.length > 0) {
       const emails = selectedUserProfiles[0].id.split("|")[2];
       const title = selectedUserProfiles[0].text;
-      handleInputChange(Member, emails);
-      handleInputChange(Member_Text, title);
+      handleInputChange(internalName, emails);
+      handleInputChange(internalName_text, title);
+      _getUserRecId(emails, internalName_key);
       console.log("Selected userids:", emails);
       console.log("Selected title:", title);
     } else {
-      handleInputChange(Member, "");
+      handleInputChange(internalName, "");
+      handleInputChange(internalName_text, "");
+      handleInputChange(internalName_key, "");
+       
     }
   };
   return (
@@ -360,7 +415,12 @@ const ServiceUIForm: React.FC<IRequestUIFormProps> = (props) => {
                 disabled={false}
                 searchTextLimit={3}
                 onChange={(e) => {
-                  _getPeoplePickerItems(e, "requestedFor", "requestedFor_Title");
+                  _getPeoplePickerItems(
+                    e,
+                    "requestedFor",
+                    "requestedFor_Title",
+                    "requestedFor_key"
+                  );
                 }}
                 principalTypes={[PrincipalType.User]}
                 resolveDelay={1000}
@@ -487,7 +547,12 @@ const ServiceUIForm: React.FC<IRequestUIFormProps> = (props) => {
                     disabled={false}
                     searchTextLimit={3}
                     onChange={(e) => {
-                      _getPeoplePickerItems(e, "GroupOwner", "GroupOwner_Title");
+                      _getPeoplePickerItems(
+                        e,
+                        "GroupOwner",
+                        "GroupOwner_Title",
+                        "GroupOwner_key"
+                      );
                     }}
                     principalTypes={[PrincipalType.User]}
                     resolveDelay={1000}
@@ -564,7 +629,8 @@ const ServiceUIForm: React.FC<IRequestUIFormProps> = (props) => {
                             _getPeoplePickerMemberItems(
                               e,
                               "Member1",
-                              "Member1_Title"
+                              "Member1_Title",
+                              "Member1_key"
                             );
                           }}
                           principalTypes={[PrincipalType.User]}
@@ -593,7 +659,8 @@ const ServiceUIForm: React.FC<IRequestUIFormProps> = (props) => {
                             _getPeoplePickerMemberItems(
                               e,
                               "Member2",
-                              "Member2_Title"
+                              "Member2_Title",
+                              "Member2_key"
                             );
                           }}
                           principalTypes={[PrincipalType.User]}
@@ -622,7 +689,8 @@ const ServiceUIForm: React.FC<IRequestUIFormProps> = (props) => {
                             _getPeoplePickerMemberItems(
                               e,
                               "Member3",
-                              "Member3_Title"
+                              "Member3_Title",
+                              "Member3_key"
                             );
                           }}
                           principalTypes={[PrincipalType.User]}
@@ -651,7 +719,8 @@ const ServiceUIForm: React.FC<IRequestUIFormProps> = (props) => {
                             _getPeoplePickerMemberItems(
                               e,
                               "Member4",
-                              "Member4_Title"
+                              "Member4_Title",
+                              "Member4_key"
                             );
                           }}
                           principalTypes={[PrincipalType.User]}
@@ -680,7 +749,8 @@ const ServiceUIForm: React.FC<IRequestUIFormProps> = (props) => {
                             _getPeoplePickerMemberItems(
                               e,
                               "Member5",
-                              "Member5_Title"
+                              "Member5_Title",
+                              "Member5_key"
                             );
                           }}
                           principalTypes={[PrincipalType.User]}
@@ -709,7 +779,8 @@ const ServiceUIForm: React.FC<IRequestUIFormProps> = (props) => {
                             _getPeoplePickerMemberItems(
                               e,
                               "Member6",
-                              "Member6_Title"
+                              "Member6_Title",
+                              "Member6_key"
                             );
                           }}
                           principalTypes={[PrincipalType.User]}
@@ -855,6 +926,12 @@ const ServiceUIForm: React.FC<IRequestUIFormProps> = (props) => {
                   Member4_Title: "",
                   Member5_Title: "",
                   Member6_Title: "",
+                  Member1_key: "",
+                  Member2_key: "",
+                  Member3_key: "",
+                  Member4_key: "",
+                  Member5_key: "",
+                  Member6_key: "",
                 });
                 setUploadedFiles([]);
                 setShowErrorUpload("");

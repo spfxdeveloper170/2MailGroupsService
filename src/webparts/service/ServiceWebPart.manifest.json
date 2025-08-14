@@ -22,7 +22,11 @@
        "Apilink":"https://mcitstgapim.mcit.gov.qa/ivantitest/new",
       "subscriptionId":"C278ABDF504E4CBB9678DFAA61B5FCE1",
       "OcpApimKey":"ba47658772b3473cbd9eb045e856e9fc",
-      "Subject":"Mail Group Service Testing"
+      "Subject":"Mail Group Service Testing",
+       "isredirect":true,
+       "attachmentApilink":"https://mcitstgapim.mcit.gov.qa/ivantitestattachment/newattachment",
+      "UserRecIdApilink":"https://mcitstgapim.mcit.gov.qa/ITSM/employeeByEmail",
+       "Category":""
     }
   }]
 }

@@ -4,6 +4,11 @@ export interface IServiceProps {
   subscriptionId: string;
   OcpApimKey: string;
   Subject: string;
+   isredirect:boolean;
+
+    attachmentApilink: string;
+  UserRecIdApilink: string;
+  Category: string;
 }
 export interface IUserProfile {
   displayName: string;
@@ -39,6 +44,12 @@ export interface IServiceRequestFormData {
   Member4_Title:string;
   Member5_Title:string;
   Member6_Title:string;
+   Member1_key:string;
+  Member2_key:string;
+  Member3_key:string;
+  Member4_key:string;
+  Member5_key:string;
+  Member6_key:string;
   description: string;
   files?: any;
   Contractdate?: Date,
